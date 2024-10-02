@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario a CV</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<form action="generar_cv.php" method="POST">
+    <h1>Formulario a CV</h1>
+    
+    <div class="seccion-nombre">
+        <label for="nombre">Nombre y Apellidos:</label>
+        <input type="text" id="nombre" name="nombre" value=" " required>
+    </div>
+
+    <div class="seccion-fecha-nacimiento">
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" value=" " required>
+    </div>
+
+    <div class="seccion-ocupacion">
+        <label for="ocupacion">Ocupación:</label>
+        <input type="text" id="ocupacion" name="ocupacion" value="" required>
+    </div>
+
+    <div class="seccion-contacto">
+        <label for="telefono">Teléfono:</label>
+        <input type="tex" id="telefono" name="telefono" value=" " required>
+    </div>
+
+    <div class="seccion-contacto">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value=" " required>
+    </div>
+
+    <div class="seccion-nacionalidad">
+        <label for="nacionalidad">Nacionalidad:</label>
+        <select id="nacionalidad" name="nacionalidad" required>
+            <option value="Perú" >Perú</option>
+            <option value="Argentina" >Argentina</option>
+            <option value="Bolivia" >Bolivia</option>
+            <option value="Brasil" >Brasil</option>
+            <option value="Chile" >Chile</option>
+            <option value="Colombia" >Colombia</option>
+            <option value="Ecuador" >Ecuador</option>
+            <option value="Guyana" >Guyana</option>
+            <option value="Paraguay">Paraguay</option>
+            <option value="Surinam" >Surinam</option>
+            <option value="Uruguay" >Uruguay</option>
+            <option value="Venezuela" >Venezuela</option>
+        </select>
+    </div>
+
+    <div class="seccion-nivel-ingles">
+        <label>Nivel de inglés:</label>
+        <label for="basico">Básico</label>
+        <input type="radio" id="basico" name="nivel_ingles" value="básico"  required>
+        <label for="intermedio">Intermedio</label>
+        <input type="radio" id="intermedio" name="nivel_ingles" value="intermedio" >
+        <label for="avanzado">Avanzado</label>
+        <input type="radio" id="avanzado" name="nivel_ingles" value="avanzado">
+        <label for="fluido">Fluido</label>
+        <input type="radio" id="fluido" name="nivel_ingles" value="fluido">
+    </div>
+
+    <div class="seccion-lenguajes-programacion">
+        <label for="lenguajes_programacion">Lenguajes de programación:</label>
+        <select id="lenguajes_programacion" name="lenguajes_programacion" multiple required>
+            <option value="JavaScript" >JavaScript</option>
+            <option value="Python" >Python</option>
+            <option value="C++" >C++</option>
+            <option value="Java" >Java</option>
+        </select>
+    </div>
+
+    <div class="seccion-aptitudes"> 
+        <label for="aptitudes">Aptitudes:</label>
+        <input list="lista_aptitudes" name="aptitudes" id="aptitudes" value=" " required>
+        <datalist id="lista_aptitudes">
+            <option value="Liderazgo">
+            <option value="Resolución de problemas">
+            <option value="Creatividad">
+            <option value="Adaptabilidad">
+            <option value="Organización">
+            <option value="Pensamiento crítico">
+        </datalist>
+    </div>
+
+    <div class="seccion-habilidades">
+        <label>Habilidades:</label>
+        <label for="comunicacion_efectiva">Comunicación efectiva</label>
+        <input type="checkbox" id="comunicacion_efectiva" name="seccion_habilidades" value="Comunicación efectiva">
+        <label for="resolucion_problemas">Resolución de problemas</label>
+        <input type="checkbox" id="resolucion_problemas" name="seccion_habilidades" value="Resolución de problemas">
+        <label for="trabajo_equipo">Trabajo en equipo</label>
+        <input type="checkbox" id="trabajo_equipo" name="seccion_habilidades" value="Trabajo en equipo">
+        <label for="gestion_tiempo">Gestión del tiempo</label>
+        <input type="checkbox" id="gestion_tiempo" name="seccion_habilidades" value="Gestión del tiempo">
+    </div>
+    
+    <div class="seccion-experiencia-laboral">
+        <label for="experiencia_laboral">Experiencia Laboral:</label>
+        <textarea id="experiencia_laboral" name="experiencia_laboral" rows="4" cols="50" required></textarea>
+    </div>
+
+    <div class="seccion-formacion">
+        <label for="formacion">Formación:</label>
+        <textarea id="formacion" name="formacion" rows="4" cols="50" required></textarea>
+    </div>
+
+
+    <div class="seccion-perfil">
+        <label for="perfil">Perfil:</label>
+        <textarea id="perfil" name="perfil" rows="4" cols="50" required></textarea>
+    </div>
+
+
+    <input type="submit" value="Enviar">
+</form>
